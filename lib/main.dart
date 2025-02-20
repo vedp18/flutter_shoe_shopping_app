@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/Providers/cart_provider.dart';
-import 'package:flutter_shopping_app/pages/home_page.dart';
+import 'package:flutter_shoe_shopping_app/Providers/cart_provider.dart';
+import 'package:flutter_shoe_shopping_app/pages/home_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -15,6 +15,7 @@ class ShoppingApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => CartProvider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Mari Dukaan',
         theme: ThemeData(
           fontFamily: "Lato",
@@ -23,12 +24,11 @@ class ShoppingApp extends StatelessWidget {
             primary: Color.fromRGBO(1, 254, 80, 1),
           ),
           appBarTheme: AppBarTheme(
-            titleTextStyle: TextStyle(
-              fontFamily: 'Lato',
-              fontSize: 20,
-              color: Colors.black,
-            )
-          ),
+              titleTextStyle: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 20,
+            color: Colors.black,
+          )),
           inputDecorationTheme: const InputDecorationTheme(
             hintStyle: TextStyle(
               fontWeight: FontWeight.bold,
